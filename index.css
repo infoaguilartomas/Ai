@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1A2B4A;
+  --color-navy-light: #2A3D5F;
+  --color-navy-dark: #0F1A2E;
+  --color-teal: #4A9B9B;
+  --color-teal-light: #5CB8B8;
+  --color-teal-dark: #3A7A7A;
+  --color-gold: #D4AF77;
+  --color-gold-light: #E0C495;
+  --color-surface: #F8F9FA;
+  --color-border-custom: #E9ECEF;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #CED4DA;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ADB5BD;
+}
+
+/* Gradient text helper */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float-delayed {
+  animation: float-delayed 5s ease-in-out 1s infinite;
+}
